@@ -3,7 +3,7 @@ A Docker container for running InfiniteWP
 
 ## Install
 
-1. Download InfiniteWP from https://infinitewp.com/installing-download/<br>This will download a package **IWPAdminPanel_v*.zip**.
+1. Download InfiniteWP from https://infinitewp.com/installing-download/<br>This will download a package **IWPAdminPanel_v\*.zip**.
 2. Save package to root of this repository.
 3. `docker-compose build --build-arg INSTALL=true`<br>
    The build arg leaves the install folder inplace to allow first run wizard to create the config.php file.
