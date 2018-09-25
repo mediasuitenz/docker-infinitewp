@@ -12,9 +12,9 @@ A Docker container for running InfiniteWP
 5. Set permissions<br>
    `chmod 666 config.php`
 6. `docker-compose up`<br>
-   _Wait for database init process to complete_
+   _Wait for "MySQL init process done. Ready for start up" in log_
 7. Open browser <http://localhost:3000>
-8. Complete InfiniteWP Installation
+8. Complete InfiniteWP Installation below.
 
 ----
 
@@ -50,6 +50,8 @@ Click the Next, Install button.
 #### Installation
 
 Installed Successfully :)
+
+Note: Ignore the "We are are not able to remove the **install** folder" warning. A second build of the image below will resolve this.
 
 ----
 
