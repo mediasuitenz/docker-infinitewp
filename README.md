@@ -13,7 +13,7 @@ A Docker container for running InfiniteWP
    `chmod 666 config.php`
 6. `docker-compose up`<br>
    _Wait for database init process to complete_
-7. Open browser `http://localhost:3000`
+7. Open browser <http://localhost:3000>
 8. Complete InfiniteWP Installation
 
 ----
@@ -53,8 +53,11 @@ Installed Successfully :)
 
 ----
 
-9. \<Ctrl+C\> running Docker compose.
-10. Reset permissions on config file.<br>
+9. \<Ctrl+C\> Docker compose logs.
+10. `docker-compose down`
+11. Reset permissions on config file.<br>
     `chmod 644 config.php`
-11. Rebuild Docker image without install directory.<br>
+12. Rebuild Docker image without install directory.<br>
     `docker-compose build`
+
+You now have a Docker image tagged infinitewp:latest.
