@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  infinitewp:
+    build: .
+    image: infinitewp
+    ports:
+      - "3000:80"
+    environment:
+      - APACHE_RUN_USER=daemon
+    volumes:
+      - ./config.php:/var/www/html/iwp/config.php
+    links:
+      - db:database
+
+  db:
+    image: mariadb:10.1
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=infinitewp
+      - MYSQL_USER=infinitewp
+      - MYSQL_PASSWORD=password
+    ports:
+      - "4306:3306"
+
+volumes:
+  db_data:
