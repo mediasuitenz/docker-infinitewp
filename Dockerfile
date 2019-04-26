@@ -1,7 +1,7 @@
 FROM alpine:latest AS iwp
 
-ARG IWP_VERSION=2.14.0.3
 ARG INSTALL=false
+ARG IWP_VERSION=2.14.7
 
 RUN \
   apk update && \
@@ -9,11 +9,11 @@ RUN \
 
 WORKDIR /tmp
 
-COPY IWPAdminPanel_v$IWP_VERSION.zip /tmp
+COPY IWPAdminPanel_v${IWP_VERSION}.zip /tmp
 
 RUN \
-  unzip IWPAdminPanel_v$IWP_VERSION.zip && \
-  mv IWPAdminPanel_v$IWP_VERSION iwp && \
+  unzip IWPAdminPanel_v${IWP_VERSION}.zip && \
+  mv IWPAdminPanel_v${IWP_VERSION} iwp && \
   if [ ! "$INSTALL" = true ]; then rm -rf iwp/install; fi
 
 FROM php:7.0-apache
