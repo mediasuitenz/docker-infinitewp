@@ -9,7 +9,7 @@ error_reporting(error_reporting() & ~E_DEPRECATED);
 }
 define('SHOW_SQL_ERROR', APP_SHOW_ERROR);
 
-define('APP_VERSION', '2.14.0.3');
+define('APP_VERSION', '2.15.1');
 define('APP_INSTALL_HASH', '123a4bcd56e78f90g123hijk4l5678901m2n345o');
 
 define('APP_ROOT', dirname(__FILE__));

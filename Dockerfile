@@ -1,6 +1,6 @@
 FROM alpine:latest AS iwp
 
-ARG IWP_VERSION=2.14.0.3
+ARG IWP_VERSION=2.15.1
 ARG INSTALL=false
 
 RUN \
